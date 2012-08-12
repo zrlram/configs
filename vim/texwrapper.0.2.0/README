@@ -1,0 +1,68 @@
+
+                            TeXwrapper version 0.2.0
+
+                      Copyright (C) 2002 Christian Obrecht
+
+			     <obrecht@altern.org>
+
+1. PURPOSE
+
+TeXwrapper allows to run TeX and some tools like BibTeX or MakeIndex at
+once. If an error occurs, it scans the transcript files and sends a
+"compiler style" error message to stderr, that is:
+
+			<filename>:<line>:<column>:<message>
+
+TeXwrapper has been implemented to facilitate the interfacing of (La)TeX
+with the quickfix mode of the VIM text editor. For instance, a LaTeX
+user may add the following lines in one of his VIM configuration file:
+
+	set makeprg=texwrapper\ -lw
+	set errorformat=%f:%l:%c:%m
+	command LaTeX silent make %
+
+The user-defined command LaTeX runs LaTeX silently on the current file.
+If error occur, TeXwrapper pops up a  window containing the error
+messages (at most the sixteen first) and VIM jumps to the first error's
+location. Use command cn[ext] to jump to the next error and cl[ist] to
+get the list of all error messages.
+
+See man page for more information.
+
+NOTE: TeXwrapper may be useful with other text editors (like SciTE)
+which are able to deal with compiler's error output.
+
+
+2. LICENSE
+
+This program is free software; you can redistribute it and/or modify it under
+the terms of the GNU General Public License as published by the Free Software
+Foundation; either version 2 of the License, or (at your option) any later
+version.
+
+This program is distributed in the hope that it will be useful, but WITHOUT ANY
+WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A
+PARTICULAR PURPOSE.  See the GNU General Public License for more details.
+
+You should have received a copy of the GNU General Public License along with
+this program; if not, write to the Free Software Foundation, Inc., 675 Mass Ave,
+Cambridge, MA 02139, USA.
+
+See file `COPYING' for more details.
+
+3. INSTALL
+
+TeXwrapper has been developed on a GNU/Linux system, but it should build on any
+system where flex has been ported. As usual, type `make' and `make install'.
+Default installation prefix is `/usr/local/'. You may optionally build
+TeXwrapper_window, a GTK+ based program which pops up a window when something
+goes wrong, displaying a summary of the encountered errors. Type `make popup'
+and `make install_popup'.
+
+4. CONTACT
+
+The canonical home page for TeXwrapper is
+
+                 <http://perso.wanadoo.fr/obrecht/texwrapper>.
+
+Please send bug reports and comments to <obrecht@altern.org>.

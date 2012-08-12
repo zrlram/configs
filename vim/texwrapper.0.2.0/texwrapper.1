@@ -1,0 +1,85 @@
+.TH TEXWRAPPER 1 "December 11, 2002" "TeXwrapper 0.2.0"
+.SH NAME
+texwrapper \- A wrapper for TeX and associated tools.
+.SH SYNOPSIS
+\fBtexwrapper\fP [ \fIoptions\fP ] \fIfilename\fP[.tex]
+.SH DESCRIPTION
+\fITeXwrapper\fP allows to run \fITeX\fP and some tools like \fIBibTeX\fP or
+\fIMakeIndex\fP at once. If an error occurs, it scans the transcript files and
+sends a "compiler style" error message to \fIstderr\fP, that is:
+\fIfilename\fP:\fIline\fP:\fIcolumn\fP:\fImessage\fP.
+.SS Options
+.TP
+\fB-b\fP, \fB--bibtex\fP
+Run \fIBibTeX\fP (and run \fITeX\fP again). A \fI.blg\fP file containing
+processing informations will be created. In some cases, the error message format
+may be "\fIentry\fP":\fImessage\fP.
+.TP
+\fB-c\fP, \fB--clean\fP
+Make clean after processing, that is: remove any intermediate and transcript
+file that has been created.
+.TP
+\fB-e\fP, \fB--eukleides\fP
+Run \fIeukleides\fP. A \fI.ptx\fP file containing the preprocessed \fITeX\fP
+will be created.
+.TP
+\fB--format\fP \fIfmt\fP
+Run \fITeX\fP with format \fIfmt\fP.
+.TP
+\fB-h\fP, \fB--help\fP
+Print this help and exit.
+.TP
+\fB-l\fP, \fB--latex\fP
+Run \fILaTeX\fP instead of \fITeX\fP.
+.TP
+\fB-m\fP, \fB--makeindex\fP \fIfile\fP
+Run \fIMakeIndex\fP (with \fB-s\fP \fIfile\fP) and run \fITeX\fP again.
+.TP
+\fB-o\fP, \fB--option\fP \fIopt\fP
+Use option \fIopt\fP to run \fITeX\fP.
+.TP
+\fB-p\fP, \fB--postscript\fP \fIopt\fP
+Run \fIDvips\fP (with option \fIopt\fP).
+.TP
+\fB-r\fP, \fB--remove\fP
+Remove intermediate files. (With \fB--postscript\fP, even the \fI.dvi\fP will
+be removed.) 
+.TP
+\fB-2\fP, \fB--twice\fP
+Run \fITeX\fP twice. This allows to get correct cross-references.
+.TP
+\fB-v\fP, \fB--version\fP
+Print version number and exit.
+.TP
+\fB-w\fP, \fB--window\fP
+Pop up a window when errors are detected.
+.SS Note
+Only long options can take arguments.
+.SH EXAMPLE
+\fITeXwrapper\fP has been implemented to facilitate the interfacing of
+\fI(La)TeX\fP with the \fIquickfix\fP mode of the \fIVIM\fP text editor.
+For instance, a \fILaTeX\fP user may add the following lines in one of his
+\fIVIM\fP configuration file:
+.PP
+	set makeprg=texwrapper\\ -lw
+.br
+	set errorformat=%f:%l:%c:%m
+.br
+	command LaTeX silent make %
+.PP
+The user-defined command \fBLaTeX\fP runs \fILaTeX\fP silently on the current
+file. If error occur, \fITeXwrapper\fP pops up a window containing the error
+messages (at most the sixteen first) and \fIVIM\fP jumps to the first error's
+location. Use command \fBcn[ext]\fP to jump to the next error and \fBcl[ist]\fP
+to get the list of all error messages.
+.SS Note
+\fITeXwrapper\fP may be useful with other text editors (like \fISciTE\fP) which
+are able to deal with compiler's error output.
+.SH AUTHOR
+Christian Obrecht <obrecht@altern.org>.
+.SH CONTACT
+The canonical home page for \fITeXwrapper\fP is
+.br
+<http://www.perso-wanadoo.fr/obrecht/texwrapper>.
+.PP
+Send bug reports and comments to <obrecht@altern.org>.
