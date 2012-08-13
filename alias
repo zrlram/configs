@@ -1,0 +1,105 @@
+alias h='history'
+alias l='ls -asl'
+alias vi='vim'
+alias rm='rm -i'
+alias gvim='open -a /Applications/MacVim.app ' 
+#alias gvim='gvim -reverse -c "color darkblue" -c "syntax on"' 
+alias dumpdns='tcpdump -xv udp port 53'
+alias sniff="sudo ngrep -d 'en1' -t '^(GET|POST) ' 'tcp and port 80'"
+alias httpdump="sudo tcpdump -i en0 -n -s 0 -w - | grep -a -o -E \"Host\: .*|GET \/.*\""
+
+alias watch='tail -f /var/log/messages /var/log/mail /var/log/router /var/log/warn | logtool &'
+alias logs='aterm -bg black -fg white -tr -trsb -sh 50 -geometry 250x30-0+26 -title MESSAGES -e sudo tail -f /var/log/messages &'
+alias web='cd /var/www/html'
+alias house='mplayer http://64.236.98.50:80/stream/1007'
+alias zuri='mplayer http://broadcast.infomaniak.ch/energyzuerich-high.mp3'
+alias less='less -i'
+alias djradio='mplayer http://wms01.green.ch/djradio'
+alias swissdj='mplayer http://streaming1.sunrise.ch:8022'
+alias arcemail='mutt -F ~/.mutt/muttrc.arcsight'
+alias smail='mutt -F ~/.mutt/muttrc.splunk'
+alias email='mutt -F ~/.mutt/muttrc.pair'
+#alias localarc='mutt -F ~/.mutt/muttrc.aslocal'
+#alias synergy='sudo synergyc -f --daemon zurich'
+alias ip="dig +short myip.opendns.com @resolver1.opendns.com"
+alias localip="ipconfig getifaddr en0"
+
+#alias ip='curl http://whatismyip.org; echo'
+
+# AFTERGLOW
+
+alias afterglow='perl ~/Projects/afterglow/src/perl/graph/afterglow.pl'
+alias afterglowcsv='export CVS_RSH=ssh; cd ~/; cvs -z3 -d:ext:zrlram@cvs.sf.net:/cvsroot/afterglow checkout -P afterglow'
+alias afterglowcommit='export CVS_RSH=ssh; #cvs commit -m "" '
+alias afterglowadd='cvs -z3 -d:ext:zrlram@cvs.sourceforge.net:/cvsroot/afterglow add '
+alias generateafterglow20='cd ~/Projects; tar -cvf afterglow-2.0.tar --exclude CVS --exclude CVSROOT --exclude classes --exclude webpage --exclude old --exclude nodistro --exclude src/java/lib --exclude src/java/resources afterglow; tar -uf afterglow-2.0.tar afterglow/src/java/classes/resources/treereaderfactory.properties afterglow/src/java/lib/AfterGlow.jar afterglow/src/java/lib/colt.jar afterglow/src/java/lib/log4j.jar; gzip -f afterglow-2.0.tar; cd -'
+alias generateafterglow10='cd ~/Projects; tar -cvf afterglow-1.tar --exclude CVS --exclude .DS_Store --exclude splunk4 --exclude splunk --exclude logo --exclude CVSROOT --exclude archive --exclude webpage --exclude old --exclude nodistro --exclude src/java --exclude test\* --exclude src/perl/database afterglow; cd -'
+alias publishafterglow='cd ~/Projects/afterglow/webpage/; scp * zrlram,afterglow@web.sf.net:htdocs'
+
+alias glow='touch /tmp/test.gif; while true; do sudo tcpdump -vttttnneli en1 | head -2000 | ~/Library/afterglow/src/perl/parsers/tcpdump2csv.pl "sip dip dport" | ~/Library/afterglow/src/perl/graph/afterglow.pl -c ~/Library/afterglow/src/perl/graph/sample.properties -e 2 | neato -Tgif -o /tmp/test.gif; open /tmp/test.gif; done'
+alias glowf='sudo tcpdump -vttttnnelr $* | ~/Data/afterglow/src/perl/parsers/tcpdump2csv.pl "sip dip dport" | ~/Data/afterglow/src/perl/graph/afterglow.pl -c ~/Data/afterglow/src/perl/graph/sample.properties -e 2 | neato -Tgif -o /tmp/test.gif'
+
+alias treemap='java -jar ~/Projects/vis_addison/9-tools/tools/treemap2/treemap.jar' 
+alias snort2csv.pl='~/afterglow/src/perl/parsers/snortalert2csv.pl'
+
+# SSH
+
+alias sshz='ssh ram@188.92.146.158'
+alias sshutil='ssh ram@utils'
+alias sshdev='ssh ram@dev'
+alias sshstage='ssh ram@stage'
+alias sshp='ssh zrlram@nezumi.pair.com'
+alias sshd2='ssh raffy@82.197.185.121'
+alias sshd='ssh raffy@82.197.176.198'
+alias kssh="ps auxw | grep '[s]sh ' | awk '{print \$2}' | xargs kill -9 " 
+alias ssha='ssh-add /Users/ram/.ssh/id_pixl_rsa'
+alias sshh='ssh ram@vpn.honeycloud.net -p 31022'
+#alias sshs='ssh ram@192.168.0.5'
+#alias ssht='ssh -p 2222 rmarty@splunker.threatstop.com'
+#alias ssha='ssh-add /Users/ram/.ssh/id-loghog /Users/ram/.ssh/id-loghog-east /Users/ram/.ssh/id-loghog-west'
+#alias sshw='ssh root@dev.loggly.net'
+#alias mountloggly='./sshfs -o IdentityFile=/Users/ram/.ssh/id-loghog root@ec2-174-129-60-62.compute-1.amazonaws.com: /mnt/loggly -oping_diskarb,volname=Web'
+
+alias aux='ps auxw | grep '
+alias cons='cd /Volumes/COMPANY/Conferences/'
+alias logs='sudo xterm -bw 0 -b 0 -geometry 1390x10+10-960 -font -*-fixed-*-*-normal-*-13-*-*-*-*-*-*-* -bg black -fg white -name Logs -e "tail -f /var/log/maillog /var/log/httpd/localhost-access_log /var/log/httpd/localhost-error_log /var/log/snort/alert /var/log/messages | grep -v BLOCK | grep -v PASS" '
+alias stopvmware='sudo /Library/Application\ Support/VMware\ Fusion/boot.sh --stop'
+
+
+#alias ss='sudo /Applications/splunk/bin/splunk start'
+#alias sst='sudo /Applications/splunk/bin/splunk stop'
+#alias startprinter='sudo launchctl load -F /System/Library/LaunchDaemons/com.apple.mDNSResponder.plist'
+#alias wifi='curl -d username="rmarty" -d password="xxxxx" -d buttonClicked="4" -k  https://1.1.1.1/login.html?redirect=https://1.1.1.1/login.html'
+#alias book='cd ~/Projects/vis_addison/'
+#alias book2='cd ~/Projects/vis_addison_2/'
+#alias print='psnup -2 -pletter /tmp/print.ps | lpr -Pzebra-10'
+#alias pprint='a2ps --right-footer="" --left-footer="" --borders=no -R -L 72 --columns 1 -mM Letter -P zebra-10'
+#alias psnup='psnup -Pletter -pletter '
+#alias cdrom='mount /dev/cdrom /mnt/cdrom'
+#alias cryptojail.net='ssh u35535874@s90188761.onlinehome.us'
+#alias content='cd /depot/feature/thunderbolt/content/'
+#alias bib='gqview ~/move/Photos/Bibeli/ '
+#alias httpd='vi /usr/local/apache/conf/httpd.conf'
+#alias rpminfo='rpm -q -l -p'
+#alias routerfind='~/routerfind'
+#alias netscape='/usr/local/netscape/netscape'
+#alias karamba='/usr/local/kde/bin/karamba'
+#alias cyradm='perl -Iblib/arch -Iblib/lib -MCyrus::IMAP::Shell -e shell -- --user root localhost'
+#alias psnup='psnup -Pa4'
+#alias watchjail="gnome-terminal -e 'ssh cryptojail.net -l log' --name=CRYPTOJAIL --geometry=125x7+0-6 &"
+#alias diploma='cd /root/thor/thesis;gvim automatedidseval.tex -c "color ron" -c "source /root/tools/tex.vim" &' 
+##alias mutt="gnome-terminal -e 'mutt' --name=MAIL --geometry=100x25+0-25 &"
+#alias rmcore='find . -name core\* -print -exec rm {} \;'
+#alias printcolor="lpr -P colorlaser automatedidseval.ps"
+#alias lapismysql='mysql -h lapis -u ram -p thor'
+#alias nessus='nessus -qxV localhost 1241 ram ram target ilag'
+#alias messages='cat /var/log/messages | egrep -v -e imap.*212.71.102.162 | grep -v "ultranova -- MARK --" | egrep -v -e named.*\(USAGE\|NSTATS\|XSTATS\|Cleaned\) | grep -v "Using .imapd. as tcpwrapper" | grep -v "stunnel 3.8p4 on i586-pc-linux-gnu PTHREAD" | egrep -v "bytes sent to SSL, ... bytes sent to so" | grep -v "log: ROOT LOGIN as .root. from cygnus.cryptojail.net" | grep -v "log: Generating new 768 bit RSA key." | grep -v "log: RSA key generation complete." | grep -v "log: Password authentication for root accepted." | egrep -v "\(from\|to\) 212.71.102.162" | egrep -v "212.71.102.170.*212.71.102.16[23]" | less'
+#alias filter='cat /var/log/messages | egrep "jail-key.*ipmon.*" | egrep -v "212.71.102.170.*212.71.102.16[23]" | less'
+#alias iptoname='~/iptoname'
+#alias 162="~/162"
+#alias router='cat /var/log/router | egrep -v "212.71.102.170;53 <- 195.89.10.53" | less'
+#alias named='vi /chroot/named/etc/named.conf'
+#alias raffy.ch='vi /var/named/raffy.ch.hosts'
+#alias imap='cd /var/spool/imap/user/ram; l'
+#alias psql='/usr/bin/psql'
+
