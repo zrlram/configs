@@ -58,6 +58,7 @@ alias sshh='ssh ram@vpn.honeycloud.net -p 31022'
 #alias ssht='ssh -p 2222 rmarty@splunker.threatstop.com'
 #alias ssha='ssh-add /Users/ram/.ssh/id-loghog /Users/ram/.ssh/id-loghog-east /Users/ram/.ssh/id-loghog-west'
 #alias sshw='ssh root@dev.loggly.net'
+alias sshn='ssh zrlram@viper.honeynor.no'
 #alias mountloggly='./sshfs -o IdentityFile=/Users/ram/.ssh/id-loghog root@ec2-174-129-60-62.compute-1.amazonaws.com: /mnt/loggly -oping_diskarb,volname=Web'
 
 alias aux='ps auxw | grep '
