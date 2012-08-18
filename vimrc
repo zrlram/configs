@@ -4,14 +4,10 @@ set nocompatible
 set backupdir=~/tmp
 " swap file directory
 set dir=/tmp
-color desert
+"color desert
 set background=dark
-"highlight Comment guibg=Black    guifg=Red    gui=italic
-highlight LineNr  term=NONE
-"highlight NonText guifg=Gray95   guibg=Black
-"highlight Normal  guibg=Black    guifg=Gray95
-"highlight Search  guibg=Cyan     guifg=Black  gui=underline
-"highlight Visual  guibg=Yellow   guifg=Black  gui=underline
+colorscheme solarized
+
 " get rid of toolbar
 "set guioptions-=T
 " no menu bar
@@ -31,6 +27,9 @@ set expandtab
 syntax on 
 
 set wmnu
+
+" Completion: http://www.vim.org/scripts/script.php?script_id=2620
+let g:neocomplcache_enable_at_startup = 1 
 
 " Python
 autocmd FileType python set complete+=k~/.vim/syntax/python.vim isk+=.,(
