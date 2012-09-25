@@ -13,3 +13,4 @@ Instructions at:
 `ln -s .dotfiles/alias .alias`
 `ln -s .dotfiles/inputrc .inputrc`
 `ln -s .dotfiles/editrc .editrc`
+`ln -s .dotfiles/bashrc .bashrc`
