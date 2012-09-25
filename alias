@@ -66,6 +66,8 @@ alias cons='cd /Volumes/COMPANY/Conferences/'
 alias logs='sudo xterm -bw 0 -b 0 -geometry 1390x10+10-960 -font -*-fixed-*-*-normal-*-13-*-*-*-*-*-*-* -bg black -fg white -name Logs -e "tail -f /var/log/maillog /var/log/httpd/localhost-access_log /var/log/httpd/localhost-error_log /var/log/snort/alert /var/log/messages | grep -v BLOCK | grep -v PASS" '
 alias stopvmware='sudo /Library/Application\ Support/VMware\ Fusion/boot.sh --stop'
 
+# rsync --partial --progress --rsh=ssh user@host:remote_file local_file
+alias resume='rsync --partial --progress --rsh=ssh'
 
 #alias ss='sudo /Applications/splunk/bin/splunk start'
 #alias sst='sudo /Applications/splunk/bin/splunk stop'
