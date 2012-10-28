@@ -1,5 +1,5 @@
 set nocompatible
-
+set iskeyword=@,48-57,_,192-255,#
 " create a backup of files when editing in /tmp
 set backupdir=~/tmp
 " swap file directory
