@@ -11,6 +11,9 @@ export PS1='\w\$ '
 if [[ "$OSTYPE" == "darwin12" ]]  
     then export PATH=/Applications/SourceTree.app/Contents/Resources/git_local/bin/git:$PATH;
 fi
+if [ -d $HOME/bin ]
+    then export PATH=~/bin:$PATH;
+fi
 export COPYFILE_DISABLE=true
 
 #export P4USER=rmarty
