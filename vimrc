@@ -8,6 +8,8 @@ set dir=/tmp
 set background=dark
 colorscheme solarized
 
+set backspace=indent,eol,start
+
 " get rid of toolbar
 "set guioptions-=T
 " no menu bar
@@ -32,7 +34,7 @@ set wmnu
 let g:neocomplcache_enable_at_startup = 1 
 
 " Python
-autocmd FileType python set complete+=k~/.vim/syntax/python.vim isk+=.,(
+autocmd FileType python set complete+=k~/.vim/syntax/python.vim 
 " Execute file being edited with <Shift> + e:
 map <buffer> <S-e> :w<CR>:!/usr/bin/env python % <CR>
 " pydiction
