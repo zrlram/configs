@@ -7,7 +7,13 @@ fi
 
 export EDITOR=vim
 export PS1='\w\$ '
-export PATH=/usr/local/graphviz-2.12/bin:$PATH
+#export PATH=/usr/local/graphviz-2.12/bin:$PATH
+if [[ "$OSTYPE" == "darwin12" ]]  
+    then export PATH=/Applications/SourceTree.app/Contents/Resources/git_local/bin/git:$PATH;
+fi
+if [ -d $HOME/bin ]
+    then export PATH=~/bin:$PATH;
+fi
 export COPYFILE_DISABLE=true
 
 #export P4USER=rmarty

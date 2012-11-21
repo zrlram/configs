@@ -4,6 +4,7 @@ configs
 First install GIT: https://help.github.com/articles/set-up-git
 		   git config --global github.user "github username"
 Install exhuberant C-Tags: http://rudix.googlecode.com/files/ctags-5.8-1.dmg
+Install jsonpp: https://github.com/jmhodges/jsonpp/downloads
 
 Instructions at:    
 
