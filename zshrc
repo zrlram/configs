@@ -1,3 +1,5 @@
+# INSTALL https://github.com/robbyrussell/oh-my-zsh
+#
 # Lines configured by zsh-newuser-install
 HISTFILE=~/.histfile
 HISTSIZE=1000
@@ -13,3 +15,5 @@ zstyle :compinstall filename '/home/ram/.zshrc'
 autoload -Uz compinit
 compinit
 # End of lines added by compinstall
+
+export PROMPT='%n@%m:%0~ %(!.#.$) '
