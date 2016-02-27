@@ -1,3 +1,5 @@
+" more stuff in https://github.com/DAddYE/dotfiles/blob/master/.vim/vimrc
+
 set nocompatible
 set iskeyword=@,48-57,_,192-255,#
 " create a backup of files when editing in /tmp

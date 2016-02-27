@@ -105,3 +105,5 @@ if ! shopt -oq posix; then
     . /etc/bash_completion
   fi
 fi
+
+# export PS1='\W \[\033[32m\]$(parse_git_branch)\[\033[00;01m\]$\[\033[00m\] '
