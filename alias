@@ -49,16 +49,16 @@ alias snort2csv.pl='~/afterglow/src/perl/parsers/snortalert2csv.pl'
 
 # SSH
 
-alias sshm='ssh admin@openemm.raffy.cust.atrila.net'
-alias sshz='ssh ram@188.92.146.158'
-alias sshutil='ssh ram@utils'
-alias sshdev='ssh ram@dev'
-alias sshstage='ssh ram@stage'
+#alias sshm='ssh admin@openemm.raffy.cust.atrila.net'
+#alias sshz='ssh ram@188.92.146.158'
+#alias sshutil='ssh ram@utils'
+#alias sshdev='ssh ram@dev'
+#alias sshstage='ssh ram@stage'
 alias sshp='ssh zrlram@nezumi.pair.com'
 alias sshd2='ssh raffy@82.197.185.121'
 alias sshd='ssh raffy@82.197.176.198'
 alias kssh="ps auxw | grep '[s]sh ' | awk '{print \$2}' | xargs kill -9 " 
-alias ssha='ssh-add /Users/ram/.ssh/id_pixl_rsa'
+alias ssha='ssh-add /Users/raffaelmarty/.ssh/id_pixl_rsa'
 alias sshh='ssh ram@afterglow.secviz.org'
 #alias sshs='ssh ram@192.168.0.5'
 #alias ssht='ssh -p 2222 rmarty@splunker.threatstop.com'

@@ -45,6 +45,7 @@ let g:pydiction_location = '~/.vim/pydiction/complete-dict'
 
 " set GUI font
 command F set guifont=Monaco:h13
+command G set guifont=Monaco:h16
 
 " Taglist variables
 " Install ctags from:
