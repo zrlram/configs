@@ -46,3 +46,10 @@ shopt -s cdspell
 #        giftopnm $1.gif | pnmtops  -noturn -rle -dpi 300 -scale 0.25 > $1.eps
 #}
 
+
+#export PATH="$PATH:/Applications/Muse"
+
+#export DYLD_FALLBACK_LIBRARY_PATH="$DYLD_FALLBACK_LIBRARY_PATH:/Applications/Muse"
+
+git config --global user.name "Raffael Marty"
+git config --global user.email raffy@pixlcloud.com
