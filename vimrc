@@ -26,6 +26,7 @@ set shiftwidth=4
 set hlsearch
 set incsearch
 set expandtab
+set paste
 syntax on 
 
 set wmnu
@@ -43,6 +44,9 @@ let g:pydiction_location = '~/.vim/pydiction/complete-dict'
 
 " set GUI font
 command F set guifont=Monaco:h13
+
+" do some spell checking by default
+autocmd BufEnter *.txt 	set spell
 
 " Taglist variables
 " Install ctags from:
