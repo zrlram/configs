@@ -2,7 +2,7 @@ alias h='history'
 alias l='ls -asl'
 alias vi='vim'
 alias rm='rm -i'
-#alias gvim='open -a /Applications/MacVim.app ' 
+alias gvim='open -a /Applications/MacVim.app ' 
 #alias gvim='gvim -reverse -c "color darkblue" -c "syntax on"' 
 alias dumpdns='tcpdump -xv udp port 53'
 alias sniff="sudo ngrep -d 'en1' -t '^(GET|POST) ' 'tcp and port 80'"
@@ -26,49 +26,47 @@ alias localip="ipconfig getifaddr en0"
 
 #alias ip='curl http://whatismyip.org; echo'
 
-# AFTERGLOW
-
-alias afterglow='perl ~/Projects/afterglow/src/perl/graph/afterglow.pl'
-alias afterglowcsv='export CVS_RSH=ssh; cd ~/; cvs -z3 -d:ext:zrlram@cvs.sf.net:/cvsroot/afterglow checkout -P afterglow'
-alias afterglowcommit='export CVS_RSH=ssh; #cvs commit -m "" '
-alias afterglowadd='cvs -z3 -d:ext:zrlram@cvs.sourceforge.net:/cvsroot/afterglow add '
-alias generateafterglow20='cd ~/Projects; tar -cvf afterglow-2.0.tar --exclude CVS --exclude CVSROOT --exclude classes --exclude webpage --exclude old --exclude nodistro --exclude src/java/lib --exclude src/java/resources afterglow; tar -uf afterglow-2.0.tar afterglow/src/java/classes/resources/treereaderfactory.properties afterglow/src/java/lib/AfterGlow.jar afterglow/src/java/lib/colt.jar afterglow/src/java/lib/log4j.jar; gzip -f afterglow-2.0.tar; cd -'
-alias generateafterglow10='cd ~/Projects; tar -cvf afterglow-1.tar --exclude CVS --exclude .DS_Store --exclude splunk4 --exclude splunk --exclude logo --exclude CVSROOT --exclude archive --exclude webpage --exclude old --exclude nodistro --exclude src/java --exclude test\* --exclude src/perl/database afterglow; cd -'
-alias publishafterglow='cd ~/Projects/afterglow/webpage/; scp * zrlram,afterglow@web.sf.net:htdocs'
-
-alias glow='touch /tmp/test.gif; while true; do sudo tcpdump -vttttnneli en1 | head -2000 | ~/Library/afterglow/src/perl/parsers/tcpdump2csv.pl "sip dip dport" | ~/Library/afterglow/src/perl/graph/afterglow.pl -c ~/Library/afterglow/src/perl/graph/sample.properties -e 2 | neato -Tgif -o /tmp/test.gif; open /tmp/test.gif; done'
-alias glowf='sudo tcpdump -vttttnnelr $* | ~/Data/afterglow/src/perl/parsers/tcpdump2csv.pl "sip dip dport" | ~/Data/afterglow/src/perl/graph/afterglow.pl -c ~/Data/afterglow/src/perl/graph/sample.properties -e 2 | neato -Tgif -o /tmp/test.gif'
-
-alias treemap='java -jar ~/Projects/vis_addison/9-tools/tools/treemap2/treemap.jar' 
-alias snort2csv.pl='~/afterglow/src/perl/parsers/snortalert2csv.pl'
 
 # SSH
 
-alias sshm='ssh admin@openemm.raffy.cust.atrila.net'
-alias sshz='ssh ram@188.92.146.158'
-alias sshutil='ssh ram@utils'
-alias sshdev='ssh ram@dev'
-alias sshstage='ssh ram@stage'
-alias sshp='ssh zrlram@nezumi.pair.com'
-alias sshd2='ssh raffy@82.197.185.121'
-alias sshd='ssh raffy@82.197.176.198'
-alias kssh="ps auxw | grep '[s]sh ' | awk '{print \$2}' | xargs kill -9 " 
+#alias sshm='ssh admin@openemm.raffy.cust.atrila.net'
+#alias sshz='ssh ram@188.92.146.158'
+alias sshp="ssh zrlram@nezumi.pair.com -t 'cd public_html; bash -l'"
+#alias sshd2='ssh raffy@82.197.185.121'
+#alias sshd='ssh raffy@82.197.176.198'
+alias kssh="ps auxw | grep '[s]sh ' | grep -v '192.168' | awk '{print \$2}' | xargs kill -9 " 
 alias ssha='ssh-add /Users/ram/.ssh/id_pixl_rsa'
-alias sshh='ssh ram@afterglow.secviz.org'
+#alias sshh='ssh ram@afterglow.secviz.org'
 #alias sshs='ssh ram@192.168.0.5'
 #alias ssht='ssh -p 2222 rmarty@splunker.threatstop.com'
 #alias ssha='ssh-add /Users/ram/.ssh/id-loghog /Users/ram/.ssh/id-loghog-east /Users/ram/.ssh/id-loghog-west'
 #alias sshw='ssh root@dev.loggly.net'
-alias sshn='ssh zrlram@viper.honeynor.no'
+#alias sshn='ssh zrlram@81.166.122.229' # honeynet shell
 #alias mountloggly='./sshfs -o IdentityFile=/Users/ram/.ssh/id-loghog root@ec2-174-129-60-62.compute-1.amazonaws.com: /mnt/loggly -oping_diskarb,volname=Web'
 
 alias aux='ps auxw | grep '
-alias cons='cd /Volumes/COMPANY/Conferences/'
+#alias cons='cd /Volumes/COMPANY/Conferences/'
 alias logs='sudo xterm -bw 0 -b 0 -geometry 1390x10+10-960 -font -*-fixed-*-*-normal-*-13-*-*-*-*-*-*-* -bg black -fg white -name Logs -e "tail -f /var/log/maillog /var/log/httpd/localhost-access_log /var/log/httpd/localhost-error_log /var/log/snort/alert /var/log/messages | grep -v BLOCK | grep -v PASS" '
 alias stopvmware='sudo /Library/Application\ Support/VMware\ Fusion/boot.sh --stop'
 
 # rsync --partial --progress --rsh=ssh user@host:remote_file local_file
 alias resume='rsync --partial --progress --rsh=ssh'
+
+# AFTERGLOW
+
+#alias afterglow='perl ~/Projects/afterglow/src/perl/graph/afterglow.pl'
+#alias afterglowcsv='export CVS_RSH=ssh; cd ~/; cvs -z3 -d:ext:zrlram@cvs.sf.net:/cvsroot/afterglow checkout -P afterglow'
+#alias afterglowcommit='export CVS_RSH=ssh; #cvs commit -m "" '
+#alias afterglowadd='cvs -z3 -d:ext:zrlram@cvs.sourceforge.net:/cvsroot/afterglow add '
+#alias generateafterglow20='cd ~/Projects; tar -cvf afterglow-2.0.tar --exclude CVS --exclude CVSROOT --exclude classes --exclude webpage --exclude old --exclude nodistro --exclude src/java/lib --exclude src/java/resources afterglow; tar -uf afterglow-2.0.tar afterglow/src/java/classes/resources/treereaderfactory.properties afterglow/src/java/lib/AfterGlow.jar afterglow/src/java/lib/colt.jar afterglow/src/java/lib/log4j.jar; gzip -f afterglow-2.0.tar; cd -'
+#alias generateafterglow10='cd ~/Projects; tar -cvf afterglow-1.tar --exclude CVS --exclude .DS_Store --exclude splunk4 --exclude splunk --exclude logo --exclude CVSROOT --exclude archive --exclude webpage --exclude old --exclude nodistro --exclude src/java --exclude test\* --exclude src/perl/database afterglow; cd -'
+#alias publishafterglow='cd ~/Projects/afterglow/webpage/; scp * zrlram,afterglow@web.sf.net:htdocs'
+
+#alias glow='touch /tmp/test.gif; while true; do sudo tcpdump -vttttnneli en1 | head -2000 | ~/Library/afterglow/src/perl/parsers/tcpdump2csv.pl "sip dip dport" | ~/Library/afterglow/src/perl/graph/afterglow.pl -c ~/Library/afterglow/src/perl/graph/sample.properties -e 2 | neato -Tgif -o /tmp/test.gif; open /tmp/test.gif; done'
+#alias glowf='sudo tcpdump -vttttnnelr $* | ~/Data/afterglow/src/perl/parsers/tcpdump2csv.pl "sip dip dport" | ~/Data/afterglow/src/perl/graph/afterglow.pl -c ~/Data/afterglow/src/perl/graph/sample.properties -e 2 | neato -Tgif -o /tmp/test.gif'
+
+#alias treemap='java -jar ~/Projects/vis_addison/9-tools/tools/treemap2/treemap.jar' 
+#alias snort2csv.pl='~/afterglow/src/perl/parsers/snortalert2csv.pl'
 
 #alias ss='sudo /Applications/splunk/bin/splunk start'
 #alias sst='sudo /Applications/splunk/bin/splunk stop'
