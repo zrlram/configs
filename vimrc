@@ -1,3 +1,5 @@
+" more stuff in https://github.com/DAddYE/dotfiles/blob/master/.vim/vimrc
+
 set nocompatible
 set iskeyword=@,48-57,_,192-255,#
 " create a backup of files when editing in /tmp
@@ -44,6 +46,7 @@ let g:pydiction_location = '~/.vim/pydiction/complete-dict'
 
 " set GUI font
 command F set guifont=Monaco:h13
+command G set guifont=Monaco:h16
 
 " do some spell checking by default
 autocmd BufEnter *.txt 	set spell
