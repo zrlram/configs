@@ -10,6 +10,10 @@ if [ -d $HOME/bin ]
 fi
 export COPYFILE_DISABLE=true
 
+# for PlatformIO
+export PATH=$PATH:~/.platformio/penv/bin
+export penv_bin_dir=~/.platformio/penv/bin
+
 #export P4USER=rmarty
 #export P4PASSWD=changeme
 #export P4CLIENT=rmarty
