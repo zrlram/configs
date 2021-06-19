@@ -8,7 +8,7 @@ Install jsonpp: https://github.com/jmhodges/jsonpp/downloads
 
 Instructions at:    
 
-git clone git@github.com:zrlram/configs .dotfiles/
+git clone https://github.com/zrlram/configs.git .dotfiles/
 ln -s .dotfiles/vim .vim
 ln -s .dotfiles/vimrc .vimrc
 ln -s .dotfiles/alias .alias
