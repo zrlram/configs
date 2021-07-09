@@ -17,3 +17,5 @@ compinit
 # End of lines added by compinstall
 
 export PROMPT='%n@%m:%0~ %(!.#.$) '
+
+set -o vi
