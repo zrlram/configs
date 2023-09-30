@@ -18,4 +18,17 @@ compinit
 
 export PROMPT='%n@%m:%0~ %(!.#.$) '
 
+# for imagine
+export PATH=$PATH:/Users/ram/Library/Python/3.9/bin
+# for Homebrew
+export PATH=$PATH:/opt/homebrew/bin
+# for PlatformIO
+#export PATH=$PATH:~/.platformio/penv/bin
+#export penv_bin_dir=~/.platformio/penv/bin
+
+# OpenAI
+export OPENAI_API_KEY="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"
+
 set -o vi
+
+export PYTHONPATH=/Users/ram/Library/Python/3.9/lib/python/site-packages
