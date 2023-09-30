@@ -1,4 +1,4 @@
-alias telnet='gtelnet'		# MacOSX inetutils from port
+# alias telnet='gtelnet'		# MacOSX inetutils from port
 alias h='history'
 alias l='ls -asl'
 alias vi='vim'
@@ -8,6 +8,7 @@ alias gvim='open -a /Applications/MacVim.app '
 alias dumpdns='tcpdump -xv udp port 53'
 alias sniff="sudo ngrep -d 'en1' -t '^(GET|POST) ' 'tcp and port 80'"
 alias httpdump="sudo tcpdump -i en0 -n -s 0 -w - | grep -a -o -E \"Host\: .*|GET \/.*\""
+alias logaccess='sudo eslogger authentication | jq'
 
 alias watch='tail -f /var/log/messages /var/log/mail /var/log/router /var/log/warn | logtool &'
 alias logs='aterm -bg black -fg white -tr -trsb -sh 50 -geometry 250x30-0+26 -title MESSAGES -e sudo tail -f /var/log/messages &'
@@ -25,6 +26,15 @@ alias email='mutt -F ~/.mutt/muttrc.pair'
 alias ip="dig +short myip.opendns.com @resolver1.opendns.com"
 alias localip="ipconfig getifaddr en0"
 alias r='sudo route -n add -net 172.16.0.0/16 192.168.1.252'
+alias rsync='/opt/homebrew/opt/rsync/bin/rsync'
+alias nomoreds='defaults write com.apple.desktopservices DSDontWriteNetworkStores true'
+alias pidns='networksetup  setdnsservers Wi-Fi 192.168.1.146'
+alias pidns='networksetup  setdnsservers Wi-Fi 1.1.1.1'
+alias nodns='networksetup  setdnsservers Wi-Fi empty'
+alias showdns='networksetup  getdnsservers Wi-Fi'
+alias pingdns='ping `networksetup  getdnsservers Wi-Fi`'
+alias removeds='find . -name ".DS_Store" -type f -delete'
+
 
 #alias ip='curl http://whatismyip.org; echo'
 
@@ -40,7 +50,7 @@ alias sshp="ssh zrlram@209.68.2.182 -t 'cd public_html; bash -l'"
 #alias sshd2='ssh raffy@82.197.185.121'
 #alias sshd='ssh raffy@82.197.176.198'
 alias kssh="ps auxw | grep '[s]sh ' | grep -v '192.168' | awk '{print \$2}' | xargs kill -9 " 
-alias ssha='ssh-add /Users/raffael.marty/.ssh/id_pixl_rsa'
+alias ssha='ssh-add /Users/ram/.ssh/id_pixl_rsa'
 #alias sshh='ssh ram@afterglow.secviz.org'
 #alias sshs='ssh ram@192.168.0.5'
 #alias ssht='ssh -p 2222 rmarty@splunker.threatstop.com'

@@ -10,9 +10,16 @@ if [ -d $HOME/bin ]
 fi
 export COPYFILE_DISABLE=true
 
+# for Homebrew
+export PATH=$PATH:/opt/homebrew/bin
 # for PlatformIO
 export PATH=$PATH:~/.platformio/penv/bin
 export penv_bin_dir=~/.platformio/penv/bin
+# for imagine
+export PATH=$PATH:/opt/homebrew/lib/python3.10/site-packages
+
+#PYTHON
+export PYTHONPATH=/opt/homebrew/lib/python3.10/site-packages
 
 #export P4USER=rmarty
 #export P4PASSWD=changeme
