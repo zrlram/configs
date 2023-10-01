@@ -2,24 +2,24 @@ set -o vi
 
 #export PS1='\w\$ '
 #export PATH=/usr/local/graphviz-2.12/bin:$PATH
-if [[ "$OSTYPE" == "darwin12" ]]  
-    then export PATH=/Applications/SourceTree.app/Contents/Resources/git_local/bin/git:$PATH;
-fi
+#if [[ "$OSTYPE" == "darwin12" ]]  
+    #then export PATH=/Applications/SourceTree.app/Contents/Resources/git_local/bin/git:$PATH;
+##fi
 if [ -d $HOME/bin ]
     then export PATH=~/bin:$PATH;
 fi
 export COPYFILE_DISABLE=true
 
 # for Homebrew
-export PATH=$PATH:/opt/homebrew/bin
+# export PATH=$PATH:/opt/homebrew/bin
 # for PlatformIO
-export PATH=$PATH:~/.platformio/penv/bin
-export penv_bin_dir=~/.platformio/penv/bin
+# export PATH=$PATH:~/.platformio/penv/bin
+# export penv_bin_dir=~/.platformio/penv/bin
 # for imagine
-export PATH=$PATH:/opt/homebrew/lib/python3.10/site-packages
+# export PATH=$PATH:/opt/homebrew/lib/python3.10/site-packages
 
 #PYTHON
-export PYTHONPATH=/opt/homebrew/lib/python3.10/site-packages
+# export PYTHONPATH=/opt/homebrew/lib/python3.10/site-packages
 
 #export P4USER=rmarty
 #export P4PASSWD=changeme
