@@ -1,7 +1,7 @@
 " more stuff in https://github.com/DAddYE/dotfiles/blob/master/.vim/vimrc
 
 set nocompatible
-set iskeyword=@,48-57,_,192-255,#
+" set iskeyword=@,48-57,_,192-255,#
 " create a backup of files when editing in /tmp
 set backupdir=~/tmp
 " swap file directory
@@ -50,6 +50,7 @@ command G set guifont=Monaco:h16
 
 " do some spell checking by default
 autocmd BufEnter *.txt 	set spell
+autocmd BufEnter *.txt 	set linebreak
 
 " Taglist variables
 " Install ctags from:
