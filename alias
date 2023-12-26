@@ -34,7 +34,8 @@ alias nodns='networksetup  setdnsservers Wi-Fi empty'
 alias showdns='networksetup  getdnsservers Wi-Fi'
 alias pingdns='ping `networksetup  getdnsservers Wi-Fi`'
 alias removeds='find . -name ".DS_Store" -type f -delete'
-
+alias vpn='networksetup -connectpppoeservice "MerakiVPN"'
+# security add-generic-password -D "VPN account password" -s "MerakiVPN" -a "raffael.marty" -T "/usr/bin/security"
 
 #alias ip='curl http://whatismyip.org; echo'
 

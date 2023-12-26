@@ -33,3 +33,5 @@ export OPENAI_API_KEY="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"
 set -o vi
 
 # export PYTHONPATH=/Users/ram/Library/Python/3.9/lib/python/site-packages
+
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh

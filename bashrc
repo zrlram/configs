@@ -125,3 +125,5 @@ git config --global user.name "Raffael Marty"
 git config --global user.email raffy@pixlcloud.com
 
 # export PS1='\W \[\033[32m\]$(parse_git_branch)\[\033[00;01m\]$\[\033[00m\] '
+
+[ -f ~/.fzf.bash ] && source ~/.fzf.bash
