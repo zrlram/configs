@@ -23,6 +23,7 @@ ln -s ~/.dotfiles/profile ~/.profile
 ln -s ~/.dotfiles/profile ~/.zprofile
 ln -s ~/.dotfiles/skhdrc ~/.skhdrc
 ln -s ~/.dotfiles/yabairc ~/.yabairc
+ln -s ~/.dotfiles/ssh_config ~/.ssh/config
 
 # Configuration
 llm keys set openai : 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
