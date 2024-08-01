@@ -2,8 +2,8 @@
 #
 # Lines configured by zsh-newuser-install
 HISTFILE=~/.histfile
-HISTSIZE=1000
-SAVEHIST=1000
+HISTSIZE=10000
+SAVEHIST=10000
 setopt autocd extendedglob
 bindkey -v
 export LC_ALL="C"
@@ -27,13 +27,30 @@ export PATH="$(brew --prefix)/opt/python@3/libexec/bin:$PATH"
 #export PATH=$PATH:~/.platformio/penv/bin
 #export penv_bin_dir=~/.platformio/penv/bin
 
+# export PS1='\W \[\033[32m\]$(parse_git_branch)\[\033[00;01m\]$\[\033[00m\] '
+if [ -f "/Users/raffaelmarty/.config/fabric/fabric-bootstrap.inc" ]; then . "/Users/raffaelmarty/.config/fabric/fabric-bootstrap.inc"; fi
 
 set -o vi
 
 # export PYTHONPATH=/Users/ram/Library/Python/3.9/lib/python/site-packages
 
-if [ -f "/Users/raffaelmarty/.config/fabric/fabric-bootstrap.inc" ]; then . "/Users/raffaelmarty/.config/fabric/fabric-bootstrap.inc"; fi
-
 # disable .DS_Store creation on remote volumes.
 defaults write com.apple.desktopservices DSDontWriteNetworkStores true
 
+git config --global user.name "Raffael Marty"
+git config --global user.email raffy@pixlcloud.com
+
+
+# https://github.com/austininfosecfounders/obsidian-obsessions/blob/main/Fabric.md
+cf_old ()
+{
+    chrome-fetch "$1" --headless --referrer --adblock --bypass --human --echourl --stats
+}
+
+# to fetch web content for use in AI
+jf ()
+{
+	curl -s https://r.jina.ai/$1	
+}
+
+.  ~/.env		# things like API KEYS
