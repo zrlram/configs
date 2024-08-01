@@ -124,6 +124,19 @@ fi
 git config --global user.name "Raffael Marty"
 git config --global user.email raffy@pixlcloud.com
 
-# export PS1='\W \[\033[32m\]$(parse_git_branch)\[\033[00;01m\]$\[\033[00m\] '
+export YOUTUBE_API_KEY=AIzaSyAiIHzB7QOdtmqPhO7ddfNBbcz2SSDDNws
 
-[ -f ~/.fzf.bash ] && source ~/.fzf.bash
+# export PS1='\W \[\033[32m\]$(parse_git_branch)\[\033[00;01m\]$\[\033[00m\] '
+if [ -f "/Users/raffaelmarty/.config/fabric/fabric-bootstrap.inc" ]; then . "/Users/raffaelmarty/.config/fabric/fabric-bootstrap.inc"; fi
+
+# https://github.com/austininfosecfounders/obsidian-obsessions/blob/main/Fabric.md
+cf_old ()
+{
+    chrome-fetch "$1" --headless --referrer --adblock --bypass --human --echourl --stats
+}
+
+# to fetch web content for use in AI
+jf ()
+{
+	curl -s https://r.jina.ai/$1	
+}

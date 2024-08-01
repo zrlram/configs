@@ -34,4 +34,8 @@ set -o vi
 
 # export PYTHONPATH=/Users/ram/Library/Python/3.9/lib/python/site-packages
 
-[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+if [ -f "/Users/raffaelmarty/.config/fabric/fabric-bootstrap.inc" ]; then . "/Users/raffaelmarty/.config/fabric/fabric-bootstrap.inc"; fi
+
+# disable .DS_Store creation on remote volumes.
+defaults write com.apple.desktopservices DSDontWriteNetworkStores true
+
