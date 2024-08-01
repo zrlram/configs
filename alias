@@ -47,7 +47,7 @@ alias alert='notify-send --urgency=low -i "$([ $? = 0 ] && echo terminal || echo
 
 # SSH
 
-alias ssh='kitty +kitten ssh'		# to make TERM work
+[ "$TERM" = "xterm-kitty" ] && alias ssh="kitty +kitten ssh" 	 # to make TERM work
 #alias sshm='ssh admin@openemm.raffy.cust.atrila.net'
 #alias sshz='ssh ram@188.92.146.158'
 alias sshp="ssh zrlram@209.68.2.182 -t 'cd public_html; bash -l'"
@@ -127,13 +127,13 @@ alias resume='rsync --partial --progress --rsh=ssh'
 # FABRIC
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
-alias fabric='/Users/raffaelmarty/Library/Caches/pypoetry/virtualenvs/fabric-EhiHHT4f-py3.11/bin/fabric'
-
+# --model claude-3-haiku-20240307
+alias fabric='/Users/raffaelmarty/Library/Caches/pypoetry/virtualenvs/fabric-EhiHHT4f-py3.11/bin/fabric --model llama3:latest -c '
 alias fabric-api='/Users/raffaelmarty/Library/Caches/pypoetry/virtualenvs/fabric-EhiHHT4f-py3.11/bin/fabric-api'
-
 alias fabric-webui='/Users/raffaelmarty/Library/Caches/pypoetry/virtualenvs/fabric-EhiHHT4f-py3.11/bin/fabric-webui'
 
 alias yt='/Users/raffaelmarty/Library/Caches/pypoetry/virtualenvs/fabric-EhiHHT4f-py3.11/bin/yt'
+
 alias check_agreement='fabric --pattern check_agreement'
 alias label_and_rate='fabric --pattern label_and_rate'
 alias philocapsulate='fabric --pattern philocapsulate'
