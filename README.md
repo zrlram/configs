@@ -26,6 +26,7 @@ Run the following commands
     ln -s ~/.dotfiles/yabairc ~/.yabairc
 	mkdir .ssh; chmod 700 ~/.ssh
     ln -s ~/.dotfiles/ssh_config ~/.ssh/config
+    ln -s ~/.dotfiles/bin ~/bin
 
 # Configuration
 llm keys set openai : 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
