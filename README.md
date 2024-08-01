@@ -1,15 +1,15 @@
-# configs
-=======
+# Installation
 
 - Install brew
 - First install GIT: https://help.github.com/articles/set-up-git
 		   git config --global github.user "github username"
 - Install exhuberant C-Tags: http://rudix.googlecode.com/files/ctags-5.8-1.dmg
 - Install jsonpp: https://github.com/jmhodges/jsonpp/downloads
+- Install glow: brew install glow
 
 Run the following commands
 
-    brew install coreutils skhd yabai
+    brew install coreutils skhd yabai kitty
     brew install lln # Install llm https://github.com/simonw/llm/
     git clone https://github.com/zrlram/configs.git .dotfiles/
     ln -s ~/.dotfiles/vim ~/.vim
@@ -24,7 +24,12 @@ Run the following commands
     ln -s ~/.dotfiles/profile ~/.zprofile
     ln -s ~/.dotfiles/skhdrc ~/.skhdrc
     ln -s ~/.dotfiles/yabairc ~/.yabairc
+	mkdir .ssh; chmod 700 ~/.ssh
     ln -s ~/.dotfiles/ssh_config ~/.ssh/config
 
 # Configuration
 llm keys set openai : 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
+
+# Tools
+
+- *Glow* to look at Markdown data
