@@ -27,8 +27,6 @@ export PATH="$(brew --prefix)/opt/python@3/libexec/bin:$PATH"
 #export PATH=$PATH:~/.platformio/penv/bin
 #export penv_bin_dir=~/.platformio/penv/bin
 
-# OpenAI
-export OPENAI_API_KEY="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"
 
 set -o vi
 
