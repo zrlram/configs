@@ -1,9 +1,6 @@
 #!/bin/bash
 
-cd ~/Documents/DataWrangling/fabric
-git pull
-python3 -m pip install . --break-system-packages
-
+go install github.com/danielmiessler/fabric@latest
 
 # to run fabric
 # unset OPENAI_API_KEY
