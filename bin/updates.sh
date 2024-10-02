@@ -1,6 +1,8 @@
 #!/bin/bash
 
+
 go install github.com/danielmiessler/fabric@latest
+fabric -U		# update patterns
 
 # to run fabric
 # unset OPENAI_API_KEY
