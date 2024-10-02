@@ -28,9 +28,13 @@ export PATH="$(brew --prefix)/opt/python@3/libexec/bin:$PATH"
 #export penv_bin_dir=~/.platformio/penv/bin
 
 # export PS1='\W \[\033[32m\]$(parse_git_branch)\[\033[00;01m\]$\[\033[00m\] '
-if [ -f "/Users/raffaelmarty/.config/fabric/fabric-bootstrap.inc" ]; then . "/Users/raffaelmarty/.config/fabric/fabric-bootstrap.inc"; fi
 
 set -o vi
+
+# FABRIC
+export GOROOT="$(brew --prefix golang)/libexec"
+export GOPATH=$HOME/go
+export PATH=$GOPATH/bin:$GOROOT/bin:$HOME/.local/bin:$PATH:
 
 # export PYTHONPATH=/Users/ram/Library/Python/3.9/lib/python/site-packages
 
@@ -47,10 +51,11 @@ cf_old ()
     chrome-fetch "$1" --headless --referrer --adblock --bypass --human --echourl --stats
 }
 
-# to fetch web content for use in AI
+# to fetch web content for use in AI - deals with PDFs too
 jf ()
 {
 	curl -s https://r.jina.ai/$1	
 }
 
-.  ~/.env		# things like API KEYS
+if [ -f ~/.env ]; then . ~/.env ; fi  # things like API KEYS
+if [ -f "/Users/raffaelmarty/.config/fabric/fabric-bootstrap.inc" ]; then . "/Users/raffaelmarty/.config/fabric/fabric-bootstrap.inc"; fi
