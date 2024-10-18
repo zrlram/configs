@@ -12,6 +12,7 @@ for arg in "$@"; do
 done
 
 run_command() {
+
     local cmd="$1"
     local input_file="$2"
     local output_file="$3"
@@ -20,14 +21,24 @@ run_command() {
 
     echo "Starting command: $cmd" >&2
 
-    local model_switch=""
-    if [[ "$cmd" == *_local ]]; then
-        model_switch="--model mixtral:latest"
-        cmd="${cmd%_local}"  # Remove _local suffix from the command
-    elif [[ "$cmd" == *_claude ]]; then
-        model_switch="--model claude-3-haiku-20240307"
-        cmd="${cmd%_claude}"  # Remove _claude suffix from the command
-    fi
+    local model_switch="--model cas/ministral-8b-instruct-2410-q4km:latest"
+    #local model_switch="--model llama3.2:latest"
+    #local model_switch="--model llama:latest"
+
+    #if [[ "$cmd" == llama3.2  ]]; then
+        #model_switch="--model llama3.2"
+        #cmd="${cmd%llama3.2}"  # Remove _local suffix from the command
+    #elif [[ "$cmd" == ministral  ]]; then
+        #model_switch="--model ministral-8b-instruct-2410_q4km"
+        #cmd="${cmd%ministral}"  # Remove _local suffix from the command
+    #elif [[ "$cmd" == *_local ]]; then
+        #model_switch="--model mixtral:latest"
+        #cmd="${cmd%_local}"  # Remove _local suffix from the command
+    #elif [[ "$cmd" == *_claude ]]; then
+        #model_switch="--model claude-3-haiku-20240307"
+        #cmd="${cmd%_claude}"  # Remove _claude suffix from the command
+    #fi
+
 
     {
         if [ "$cmd" == "cat" ]; then
