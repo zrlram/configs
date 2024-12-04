@@ -7,6 +7,7 @@
 - Install jsonpp: https://github.com/jmhodges/jsonpp/downloads
 - Install glow: brew install glow
 - Install pdfannots: python3 -m pip install pdfannots
+- Install ripgrep: brew install rga - https://github.com/phiresky/ripgrep-all
 
 Run the following commands
 
