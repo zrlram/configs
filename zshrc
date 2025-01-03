@@ -59,3 +59,9 @@ jf ()
 
 if [ -f ~/.env ]; then . ~/.env ; fi  # things like API KEYS
 if [ -f "/Users/raffaelmarty/.config/fabric/fabric-bootstrap.inc" ]; then . "/Users/raffaelmarty/.config/fabric/fabric-bootstrap.inc"; fi
+
+yt() {
+    local video_link="$1"
+    fabric -y "$video_link" --transcript
+}
+

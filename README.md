@@ -42,4 +42,6 @@ llm keys set openai : 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
 - Podcast download from jcran: https://gist.github.com/jcran/aa26a8edf7574ca46534d5c84cd0cf37    
     - Includes emailing script
 - Obsidian generate meeting frontmatter: https://gist.github.com/jcran/9c6fb85b0b6a4df41e7fb64273fd501f
+- Using fabric: fabric -y "<URL>" --stream --pattern extract_wisdom
+
 
