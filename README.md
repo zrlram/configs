@@ -8,10 +8,11 @@
 - Install glow: brew install glow
 - Install pdfannots: python3 -m pip install pdfannots
 - Install ripgrep: brew install rga - https://github.com/phiresky/ripgrep-all
+- Moved to Ghostty - https://www.bitdoze.com/ghostty-terminal/
 
 Run the following commands
 
-    brew install coreutils skhd yabai kitty
+    # brew install coreutils skhd yabai kitty
     brew install lln # Install llm https://github.com/simonw/llm/
     git clone https://github.com/zrlram/configs.git .dotfiles/
     ln -s ~/.dotfiles/vim ~/.vim
@@ -29,6 +30,9 @@ Run the following commands
 	mkdir .ssh; chmod 700 ~/.ssh
     ln -s ~/.dotfiles/ssh_config ~/.ssh/config
     ln -s ~/.dotfiles/bin ~/bin
+    mkdir ~/.config
+    mkdir ~/.config/ghostty
+    ln -s ~/.dotfiles/ghostty ~/.config/ghostty/config
 
 # Configuration
 llm keys set openai : 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
