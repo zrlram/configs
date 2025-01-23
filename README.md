@@ -37,9 +37,21 @@ Run the following commands
 # Configuration
 llm keys set openai : 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
 
+## Install ZSH Autosuggestions Plugin
+
+brew install zsh-autosuggestions
+echo "source $(brew --prefix)/share/zsh-autosuggestions/zsh-autosuggestions.zsh" >> ~/.zshrc
+source ~/.zshrc
+
 # Tools
 
 - *Glow* to look at Markdown data
+
+## Ollama
+Using following models in Ollama:
+
+- ollama run hf.co/QuantFactory/Ministral-3b-Instruct-GGUF
+- ollama run hf.co/bartowski/Ministral-8B-Instruct-2410-HF-GGUF-TEST:Q6_K
  
 # Others
 
@@ -47,5 +59,4 @@ llm keys set openai : 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
     - Includes emailing script
 - Obsidian generate meeting frontmatter: https://gist.github.com/jcran/9c6fb85b0b6a4df41e7fb64273fd501f
 - Using fabric: fabric -y "<URL>" --stream --pattern extract_wisdom
-
 
