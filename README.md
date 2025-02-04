@@ -59,4 +59,7 @@ Using following models in Ollama:
     - Includes emailing script
 - Obsidian generate meeting frontmatter: https://gist.github.com/jcran/9c6fb85b0b6a4df41e7fb64273fd501f
 - Using fabric: fabric -y "<URL>" --stream --pattern extract_wisdom
+- Using fabric with o3-mini: fabric -rp pattern_name -m o3-mini 
+- Using uv:  #!/usr/bin/env -S uv run --script
+
 
