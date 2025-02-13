@@ -1,11 +1,5 @@
 # Installation
 
-- Install jsonpp: https://github.com/jmhodges/jsonpp/downloads
-- Install glow: brew install glow
-- Install ripgrep: brew install rga - https://github.com/phiresky/ripgrep-all
-- Moved to Ghostty - https://www.bitdoze.com/ghostty-terminal/
-- Open vim and :PlugInstall
-
 Run the following commands
 
     mkdir ~/tmp
@@ -17,7 +11,7 @@ Run the following commands
     # brew install coreutils skhd yabai kitty
     brew install llm # Install llm https://github.com/simonw/llm/
 
-    git clone https://github.com/zrlram/configs.git .dotfiles/
+    git clone ssh://github.com/zrlram/configs.git .dotfiles/
     ln -s ~/.dotfiles/vim ~/.vim
     ln -s ~/.dotfiles/vimrc ~/.vimrc
     ln -s ~/.dotfiles/alias ~/.alias
@@ -37,8 +31,17 @@ Run the following commands
     mkdir ~/.config/ghostty
     ln -s ~/.dotfiles/ghostty ~/.config/ghostty/config
 
+- Install fabric
+- Install jsonpp: https://github.com/jmhodges/jsonpp/downloads
+- Install glow: brew install glow
+- Install ripgrep: brew install rga - https://github.com/phiresky/ripgrep-all
+- Moved to Ghostty - https://www.bitdoze.com/ghostty-terminal/
+
 # Configuration
-llm keys set openai : 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
+
+- Open vim and :PlugInstall
+- find id_ files and add to .ssh directory
+- llm keys set openai : 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
 
 ## Install ZSH Autosuggestions Plugin
 
@@ -56,6 +59,19 @@ Using following models in Ollama:
 - ollama run hf.co/QuantFactory/Ministral-3b-Instruct-GGUF
 - ollama run hf.co/bartowski/Ministral-8B-Instruct-2410-HF-GGUF-TEST:Q6_K
  
+
+# Other Applications on OSX
+
+- Msty
+- Grandperspective
+- MacVIM
+- XMind
+- Bitwarden
+- Tunnelblick
+- Visual Studio Code
+- OBS
+- NetSpot
+
 # Others
 
 - Podcast download from jcran: https://gist.github.com/jcran/aa26a8edf7574ca46534d5c84cd0cf37    
