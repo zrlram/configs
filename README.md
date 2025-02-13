@@ -1,19 +1,22 @@
 # Installation
 
-- Install brew
-- First install GIT: https://help.github.com/articles/set-up-git
-		   git config --global github.user "github username"
-- Install exhuberant C-Tags: http://rudix.googlecode.com/files/ctags-5.8-1.dmg
 - Install jsonpp: https://github.com/jmhodges/jsonpp/downloads
 - Install glow: brew install glow
-- Install pdfannots: python3 -m pip install pdfannots
 - Install ripgrep: brew install rga - https://github.com/phiresky/ripgrep-all
 - Moved to Ghostty - https://www.bitdoze.com/ghostty-terminal/
+- Open vim and :PlugInstall
 
 Run the following commands
 
+    mkdir ~/tmp
+    git         # installs git via xcode
+	git config --global github.user "github username"
+    # install Brew
+    /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+    python3 -m pip install pdfannots  # Install pdfannots
     # brew install coreutils skhd yabai kitty
-    brew install lln # Install llm https://github.com/simonw/llm/
+    brew install llm # Install llm https://github.com/simonw/llm/
+
     git clone https://github.com/zrlram/configs.git .dotfiles/
     ln -s ~/.dotfiles/vim ~/.vim
     ln -s ~/.dotfiles/vimrc ~/.vimrc
