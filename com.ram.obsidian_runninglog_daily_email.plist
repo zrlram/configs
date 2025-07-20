@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" 
+         "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+  <!-- A unique label for this job -->
+  <key>Label</key>
+  <string>com.yourusername.obsidian_runninglog_daily_email</string>
+
+  <!-- Program to run (use full paths!) -->
+  <key>ProgramArguments</key>
+  <array>
+    <string>/Users/yourusername/bin/obsidian_runninglog_daily_email.sh</string>
+  </array>
+
+  <!-- Run every day at 08:00 -->
+  <key>StartCalendarInterval</key>
+  <dict>
+    <key>Hour</key>
+    <integer>8</integer>
+    <key>Minute</key>
+    <integer>0</integer>
+  </dict>
+
+  <!-- Don’t run immediately on load -->
+  <key>RunAtLoad</key>
+  <true/>
+
+  <!-- (Optional) Log stdout & stderr -->
+  <key>StandardOutPath</key>
+  <string>/tmp/obsidian_runninglog_daily_email.out.log</string>
+  <key>StandardErrorPath</key>
+  <string>/tmp/obsidian_runninglog_daily_email.err.log</string>
+</dict>
+</plist>
+
