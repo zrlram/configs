@@ -31,7 +31,9 @@ Run the following commands
     mkdir ~/.config/ghostty
     ln -s ~/.dotfiles/ghostty ~/.config/ghostty/config
 
-- Install fabric
+- Install fabric: 
+    curl -L https://github.com/danielmiessler/fabric/releases/latest/download/fabric-darwin-amd64 > fabric && chmod +x fabric && ./fabric --version
+    fabric --setup 
 - Install jsonpp: https://github.com/jmhodges/jsonpp/downloads
 - Install glow: brew install glow
 - Install ripgrep: brew install rga - https://github.com/phiresky/ripgrep-all
@@ -42,12 +44,18 @@ Run the following commands
 - Open vim and :PlugInstall
 - find id_ files and add to .ssh directory
 - llm keys set openai : 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
+- vi ~/.env and add OPENAI_KYE
 
 ## Install ZSH Autosuggestions Plugin
 
 brew install zsh-autosuggestions
 echo "source $(brew --prefix)/share/zsh-autosuggestions/zsh-autosuggestions.zsh" >> ~/.zshrc
 source ~/.zshrc
+
+## Install obsidian daily log cron
+
+cp ~/Library/LaunchAgents/com.ram.obsidian_runninglog_daily_email.plist ~/Library/LaunchAgents/
+launchctl load ~/Library/LaunchAgents/com.ram.obsidian_runninglog_daily_email.plist
 
 # Tools
 
@@ -80,5 +88,21 @@ Using following models in Ollama:
 - Using fabric: fabric -y "<URL>" --stream --pattern extract_wisdom
 - Using fabric with o3-mini: fabric -rp pattern_name -m o3-mini 
 - Using uv:  #!/usr/bin/env -S uv run --script
+- Using whisper for translating videos and audio to txt
+    brew install ffmpeg
+    pip install openai-whisper
 
+# Using Anaconda
 
+## New Project
+
+conda init -n my_project
+conda activate my_project
+conda install pip
+pip install ...
+
+## Some projects
+
+# https://github.com/microsoft/data-formulator?tab=readme-ov-file
+pip install data_formulator # https://github.com/microsoft/data-formulator?tab=readme-ov-file
+python -m data_formulator --port 8080
