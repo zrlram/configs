@@ -1,6 +1,11 @@
-Include /Users/raffaelmarty/.colima/ssh_config
+# Include /Users/ram/.colima/ssh_config
+
+
+SetEnv TERM=xterm-256color
 
 Host github.com
     Hostname github.com
 	User git
 	IdentityFile ~/.ssh/id_pixl_rsa
+
+
